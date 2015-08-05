@@ -1,0 +1,43 @@
+<div id="user-select">
+    <div layout="row" style="">
+        <div flex="20" class="user-select-left">
+            <md-list>
+                <md-list-item>
+                    <div ng-class="{active: select.selectedGroup == null}" ng-click="select.selectGroup(null)">
+                        Wszyscy
+                    </div>
+                </md-list-item>
+                <md-list-item ng-repeat="group in select.groups">
+                    <div ng-class="{active: group == select.selectedGroup}" ng-click="select.selectGroup(group)">
+                        {{ group.name }}
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+        <div flex layout="column" class="user-select-center">
+            <div layout="row" layout-align="space-between end">
+                <md-input-container>
+                    <label>Szukaj</label>
+                    <input type="text" ng-model="select.search.$">
+                </md-input-container>
+                <div><a href="" ng-click="select.selectAll()">Wybierz wszystkich</a></div>
+            </div>
+            <md-content style="max-height:400px">
+                <md-list>
+                    <md-list-item ng-repeat="item in select.getElements() | filter:select.search" ng-click="select.toggleElement(item)">
+                        <p>{{ item.name }}</p>
+                        <md-checkbox aria-label="select user" ng-model="item.selected" ng-change="select.preventCheck(item)"></md-checkbox>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </div>
+        <div flex="20" class="user-select-right">
+            <span>Wybrano: {{ select.selectedElements.length }}</span>
+            <md-list>
+                <md-list-item ng-repeat="item in select.selectedElements" ng-click="select.removeElement(item)">
+                    <h5>{{ item.name }} {{ item.surname }}</h5>
+                </md-list-item>
+            </md-list>
+        </div>
+    </div>
+</div>

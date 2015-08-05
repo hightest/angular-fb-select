@@ -1,0 +1,47 @@
+#user-select {
+  width: 800px;
+  margin-top: 40px;
+
+  md-list-item {
+    cursor: pointer;
+    min-height: 0;
+  }
+
+  .user-select-left {
+    margin-top: 5px;
+
+    div {
+      padding-left: 12px;
+      border-left: solid 3px transparent;
+
+      &.active {
+        font-weight: bold;
+        border-left-color: blue;
+      }
+    }
+  }
+
+  .user-select-center {
+    md-list-item {
+      border: 1px solid #FFFFFF;
+      &:hover {
+        border-color: #E0E0E0;
+      }
+    }
+  }
+
+  .user-select-right {
+    h5 {
+      margin: 0;
+    }
+    md-list-item {
+      min-height: 0;
+    }
+  }
+
+  .user-select-footer {
+    .md-button {
+      margin: 7px;
+    }
+  }
+}

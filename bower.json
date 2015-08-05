@@ -1,0 +1,26 @@
+{
+  "name": "ht-fb-select",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Adrian Nowicki <adrian.nowicki@outlook.com",
+  "license": "",
+  "homepage": "https://github.com/hightest/angular-fb-select",
+  "main": [
+    "dist/ht-fb-select.js",
+    "dist/ht-fb-select.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src",
+    "bower_components",
+    "test*",
+    "demo*",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "1.4.*",
+    "angular-material": "0.*"
+  }
+}

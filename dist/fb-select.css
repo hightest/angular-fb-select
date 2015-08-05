@@ -1,0 +1,40 @@
+/*!
+ * ht-fb-select
+ * https://github.com/hightest/angular-fb-select
+ * Version: 0.0.1 - 2015-08-05T13:52:34.570Z
+ * License: 
+ */
+#user-select {
+  width: 800px;
+  margin-top: 40px;
+}
+#user-select md-list-item {
+  cursor: pointer;
+  min-height: 0;
+}
+#user-select .user-select-left {
+  margin-top: 5px;
+}
+#user-select .user-select-left div {
+  padding-left: 12px;
+  border-left: solid 3px transparent;
+}
+#user-select .user-select-left div.active {
+  font-weight: bold;
+  border-left-color: blue;
+}
+#user-select .user-select-center md-list-item {
+  border: 1px solid #FFFFFF;
+}
+#user-select .user-select-center md-list-item:hover {
+  border-color: #E0E0E0;
+}
+#user-select .user-select-right h5 {
+  margin: 0;
+}
+#user-select .user-select-right md-list-item {
+  min-height: 0;
+}
+#user-select .user-select-footer .md-button {
+  margin: 7px;
+}
